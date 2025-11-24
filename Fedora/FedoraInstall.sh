@@ -1,10 +1,10 @@
 #! /bin/sh
 
 # Update the packages to the latest
-dnf update
+sudo dnf update
 
-dnf install screenfetch -y
-dnf install kitty -y
+sudo dnf install screenfetch -y
+sudo dnf install kitty -y
 
 flatpak install flathub com.valvesoftware.Steam -y
 flatpak install flathub com.discordapp.Discord -y
