@@ -13,10 +13,10 @@ The laptop will have Windows 10 Pro for some stuff I don't feel like dealing wit
 I will add more stuff here as I go and know more about the device.
 
 # The Lenovo ThinkPad X250 specs
-CPU: 
-GPU:
-RAM:
-Storage:
-Display:
-Battery:
-Other:
+CPU: Intel Core i7-5600U 
+GPU: Mesa Intel® HD Graphics 5500
+RAM: 8 GB DDR3L (single channel) (I will upgrade it to 16 GB later)
+Storage: 500 GB PNY SSD
+Display: 1366x768 (I don't know the panel model)
+Battery: It has 2 batteries (one internal and one removable)
+Other: I don't know
