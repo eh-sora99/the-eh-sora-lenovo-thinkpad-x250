@@ -16,3 +16,4 @@
 - Clipboard manager
 - Waybar
 - Rofi
+- EWW
