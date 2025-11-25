@@ -19,8 +19,10 @@
 - EWW
 
 ## What I need to get done
-- Getting Hyprlock working
+- <s>Getting Hyprlock working</s>
 - Getting Rofi to work with Hyprland
 - Getting EWW to work with Hyprland
 - Getting all the keybinds I want to working
-- Getting Waybar a bit more customized
+- Getting Waybar a bit more customized (Working on it)
+- Showing workspaces on Waybar
+- Getting Waybar to show both batteries
