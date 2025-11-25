@@ -17,3 +17,10 @@
 - Waybar
 - Rofi
 - EWW
+
+## What I need to get done
+- Getting Hyprlock working
+- Getting Rofi to work with Hyprland
+- Getting EWW to work with Hyprland
+- Getting all the keybinds I want to working
+- Getting Waybar a bit more customized
