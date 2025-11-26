@@ -6,6 +6,39 @@
 ## Theaming and Appearance
 ### Wallpaper
 
+### Colors
+Black to White Gradient:
+#000000
+#202020
+#303030
+#2d3436
+#64727D
+#90b1b1
+#ecf0f1
+#ffffff
+
+Red Gradient:
+#FF1000
+#f53c3c
+#eb4d4b
+#cf5700
+
+Blue Gradient:
+#009fff
+#41b4ff
+#0069d4
+
+Green Gradient:
+#1aff00
+#1ca000
+#2a5c45
+#00b093
+#51a37a
+#97e1ad
+
+Purple Gradient:
+#740864
+
 ### Waybar
 Background color: #30303030
 Highlight color: #202020
