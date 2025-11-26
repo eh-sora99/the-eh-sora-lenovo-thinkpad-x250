@@ -79,3 +79,6 @@ Modules:
 - Getting Waybar a bit more customized (Working on it)
 - Showing workspaces on Waybar
 - Getting Waybar to show both batteries
+
+## Notes and commands
+pkill waybar && hyprctl dispatch exec waybar
