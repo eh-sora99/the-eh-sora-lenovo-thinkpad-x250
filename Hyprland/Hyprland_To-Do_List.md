@@ -48,13 +48,28 @@ Font: FiraCode Nerd Font Mono
 Icons: Material Design Icons
 Modules:
 - Workspaces
-- Window Title
+- Sound Volume/ Mute
+- Networking/ network settings
+- Bluetooth settings
+- Power Settings
 - CPU Usage
 - Memory Usage
-- Network Speed
-- Battery Status
-- Clock
+- Time (in 24-hour format, with seconds somewhat in the center)
+- CPU Temperature
+- Disk Usage
+- GPU Usage
+- Fan Speed
+- Battery Status (for both batteries)
+- The current date
 - System Tray
+- Weather
+- Power Options
+    - Sleep
+    - Shutdown
+    - Restart
+    - Logout
+    - Lock Screen
+    - Settings
 
 ### Rofi
 
