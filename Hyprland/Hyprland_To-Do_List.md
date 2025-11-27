@@ -40,7 +40,7 @@ Purple Gradient:
 #740864
 
 ### Waybar
-Background color: #30303030
+Background color: #303030
 Highlight color: #202020
 Font color: #FF1000
 Font size: 15
@@ -76,9 +76,11 @@ Modules:
 - Getting Rofi to work with Hyprland
 - Getting EWW to work with Hyprland
 - Getting all the keybinds I want to working
-- Getting Waybar a bit more customized (Working on it)
-- Showing workspaces on Waybar
+- <s>Getting Waybar a bit more customized (Working on it)</s>
+- <s>Showing workspaces on Waybar</s>
 - Getting Waybar to show both batteries
+- <s>Notifications daemon</s>
+
 
 ## Notes and commands
 pkill waybar && hyprctl dispatch exec waybar
