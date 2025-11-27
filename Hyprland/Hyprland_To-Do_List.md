@@ -59,30 +59,33 @@ Modules:
 ### Rofi
 
 ## What I need for Hyprland?
-- Hyprland
-- Hyprpaper
+- Hyprland - OK
+- Hyprpaper - OK
 - Hyprpicker
-- Hyprshot
-- Hyprctl
+- Hyprshot - OK
+- Hyprctl - OK
 
-- Notifications daemon
+- Notifications daemon - OK
 - Clipboard manager
-- Waybar
+- Waybar - OK
 - Rofi
 - EWW
 
 ## What I need to get done
 - <s>Getting Hyprlock working</s>
+- <s>Getting Waybar a bit more customized (Working on it)</s>
+- <s>Showing workspaces on Waybar</s>
+- <s>Notifications daemon</s>
 - Getting Rofi to work with Hyprland
 - Getting EWW to work with Hyprland
 - Getting all the keybinds I want to working
-- <s>Getting Waybar a bit more customized (Working on it)</s>
-- <s>Showing workspaces on Waybar</s>
 - Getting Waybar to show both batteries
-- <s>Notifications daemon</s>
 
 
 ## Notes and commands
 pkill waybar && hyprctl dispatch exec waybar
 
 sudo dnf install wayland-devel wayland-protocols-devel hyprlang-devel pango-devel cairo-devel file-devel libglvnd-devel libglvnd-core-devel libjpeg-turbo-devel libwebp-devel libjxl-devel gcc-c++ hyprutils-devel hyprwayland-scanner
+dnf copr enable erikreider/SwayNotificationCenter
+dnf install SwayNotificationCenter
+dnf install SwayNotificationCenter-git
