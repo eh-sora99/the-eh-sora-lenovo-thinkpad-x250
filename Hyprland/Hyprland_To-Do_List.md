@@ -6,6 +6,11 @@
 ## Theaming and Appearance
 ### Wallpaper
 
+Color Pallet
+Black:
+Highlight Color (Waybar):
+Waybar Font Color:
+Waybar Moudles:
 ### Colors
 Black to White Gradient:
 #000000
@@ -104,3 +109,7 @@ sudo dnf install wayland-devel wayland-protocols-devel hyprlang-devel pango-deve
 dnf copr enable erikreider/SwayNotificationCenter
 dnf install SwayNotificationCenter
 dnf install SwayNotificationCenter-git
+
+# Sources
+Background image Google search for "my dress up darling hd backgrounds dark" (https://share.google/images/j3WGypCiFIIXaXyFr)
+Lockscreen: https://share.google/images/SZRnolPN11g3Gp76L
