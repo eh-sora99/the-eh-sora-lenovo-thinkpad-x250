@@ -100,6 +100,9 @@ Modules:
 - Getting EWW to work with Hyprland
 - Getting all the keybinds I want to working
 - Getting Waybar to show both batteries
+- Clean up the Hyprland_To-Do_List.md file
+- Fix the thearmals of the system
+- Organize the GitHub repo better
 
 
 ## Notes and commands
@@ -113,3 +116,4 @@ dnf install SwayNotificationCenter-git
 # Sources
 Background image Google search for "my dress up darling hd backgrounds dark" (https://share.google/images/j3WGypCiFIIXaXyFr)
 Lockscreen: https://share.google/images/SZRnolPN11g3Gp76L
+https://fontawesome.com/search?q=code
