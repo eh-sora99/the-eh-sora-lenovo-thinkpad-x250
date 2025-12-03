@@ -5,37 +5,60 @@
     border-radius: 12;
     /*border-radius: 80;*/
 }
-
-window#waybar {
+/*Modules*/
+#clock,
+#battery,
+#cpu,
+#memory,
+#disk,
+#temperature,
+#backlight,
+#network,
+#pulseaudio,
+#wireplumber,
+#custom-media,
+#tray,
+#mode,
+#idle_inhibitor,
+#scratchpad,
+#power-profiles-daemon,
+#keyboard-state,
+#custom-power,
+#mpd {
+    padding: 10px 10px;
+    color: #ff1000;
+}
+/*Waybar*/
+#window,
+#waybar {
     background-color: rgba(43, 48, 59, 0.5);
     border-bottom: 3px solid rgba(100, 114, 125, 0.5);
     color: #ffffff;
     transition-property: background-color;
     transition-duration: .5s;
 }
-
-window#waybar.hidden {
+#window,
+#waybar.hidden {
     opacity: 0.5;
 }
-
-
-window#waybar.empty {
+#window,
+#waybar.empty {
     background-color: Transparent;
 }
-window#waybar.solo {
+#window,
+#waybar.solo {
     background-color: #009fff;
 }
-
-
-window#waybar.termite {
+#window,
+#waybar.termite {
     background-color: #FF1000;
 }
-
-window#waybar.chromium {
+#window,
+#waybar.chromium {
     background-color: #303030;
     border: none;
 }
-
+/*Buttons*/
 button {
     /* Use box-shadow instead of border so the text isn't offset */
     box-shadow: inset 0 -3px transparent;
@@ -43,18 +66,14 @@ button {
     border: none;
     border-radius: 10;
 }
-
 /* https://github.com/Alexays/Waybar/wiki/FAQ#the-workspace-buttons-have-a-strange-hover-effect */
 button:hover {
     background: inherit;
-    box-shadow: inset 0 -3px #ffffff;
+    /*box-shadow: inset 0 -3px #ffffff;*/
 }
 
-/* you can set a style on hover for any module like this */
-#pulseaudio:hover {
-    background-color: #202020;
-}
-
+/*Waybar Left*/
+/*Workspaces*/
 #workspaces button {
     padding: 0 5px;
     background-color: #303030;
@@ -79,26 +98,7 @@ button:hover {
     box-shadow: inset 0 -3px #ffffff;
 }
 
-#clock,
-#battery,
-#cpu,
-#memory,
-#disk,
-#temperature,
-#backlight,
-#network,
-#pulseaudio,
-#wireplumber,
-#custom-media,
-#tray,
-#mode,
-#idle_inhibitor,
-#scratchpad,
-#power-profiles-daemon,
-#mpd {
-    padding: 10px 10px;
-    color: #ff1000;
-}
+
 
 #window,
 #workspaces {
@@ -115,94 +115,16 @@ button:hover {
     margin-right: 0;
 }
 
-#clock {
-    background-color: #303030;
+/*Network*/
+#network:hover {
+        background-color: #202020;
 }
-
-#battery {
-    background-color: #303030;
-    color: #ff1000;
-}
-
-#battery.charging, #battery.plugged {
-    color: #1aff00;
-    background-color: #303030;
-}
-
-@keyframes blink {
-    to {
-        background-color: #303030;
-        color: #000000;
-    }
-}
-
-/* Using steps() instead of linear as a timing function to limit cpu usage */
-#battery.critical:not(.charging) {
-    background-color: #f53c3c;
-    color: #ffffff;
-    animation-name: blink;
-    animation-duration: 0.5s;
-    animation-timing-function: steps(12);
-    animation-iteration-count: infinite;
-    animation-direction: alternate;
-}
-
-#power-profiles-daemon {
-    padding-right: 15px;
-}
-
-#power-profiles-daemon.performance {
-    background-color: #303030;
-    color: #ff1000;
-}
-
-#power-profiles-daemon.balanced {
-    background-color: #303030;
-    color: #1aff00;
-}
-
-#power-profiles-daemon.power-saver {
-    background-color: #303030;
-    color: #41b4ff;
-}
-
-label:focus {
-    background-color: #000000;
-}
-
-#cpu {
-    background-color: #303030;
-    color: #ff1000;
-}
-
-#memory {
-    background-color: #303030;
-}
-
-#disk {
-    background-color: #303030;
-}
-
-#backlight {
-    background-color: #303030;
-}
-
 #network {
     background-color: #303030;
 }
 
 #network.disconnected {
     background-color: #303030;
-}
-
-#pulseaudio {
-    background-color: #303030;
-    color: #ff1000;
-}
-
-#pulseaudio.muted {
-    background-color: #90b1b1;
-    color: #2a5c45;
 }
 
 #wireplumber {
@@ -213,7 +135,156 @@ label:focus {
 #wireplumber.muted {
     background-color: #f53c3c;
 }
+/*Bluetooth*/
+/*Audio*/
+#pulseaudio {
+    background-color: #303030;
+    color: #ff1000;
+}
+#pulseaudio.muted {
+    background-color: #90b1b1;
+    color: #2a5c45;
+}
+#pulseaudio:hover {
+    background-color: #202020;
+}
 
+/*waybar Center*/
+/*Clock*/
+#clock {
+    background-color: #303030;
+    font-weight: 700;
+}
+#clock:hover {
+    background-color: #202020;
+}
+
+/*Waybar Right*/
+/*Temps*/
+#temperature {
+    background-color: #303030;
+}
+#temperature.critical {
+    background-color: #303030;
+}
+#temperature:hover {
+    background-color: #202020;
+}
+/*Fan Speed*/
+/*RAM*/
+#memory {
+    background-color: #303030;
+}
+#memory:hover {
+        background-color: #202020;
+}
+/*CPU*/
+#cpu {
+    background-color: #303030;
+    color: #ff1000;
+}
+#cpu:hover {
+        background-color: #202020;
+}
+
+/*Power Profiles*/
+#power-profiles-daemon {
+    padding-right: 15px;
+}
+#power-profiles-daemon.performance {
+    background-color: #303030;
+    color: #ff1000;
+}
+#power-profiles-daemon.performance:hover {
+    background-color: #202020;
+}
+#power-profiles-daemon.balanced {
+    background-color: #303030;
+    color: #1aff00;
+}
+#power-profiles-daemon.balanced:hover {
+    background-color: #202020;
+}
+#power-profiles-daemon.power-saver {
+    background-color: #303030;
+    color: #41b4ff;
+}
+#power-profiles-daemon.power-saver:hover {
+    background-color: #202020;
+}
+/*Batteries*/
+#battery:hover {
+     background-color: #202020;
+}
+#battery {
+    background-color: #303030;
+    color: #ff1000;
+}
+#battery.charging, #battery.plugged {
+    color: #1aff00;
+    background-color: #303030;
+}
+#battery.charging, #battery.plugged:hover {
+    background-color: #202020;
+}
+#battery.critical:not(.charging) {
+    background-color: #f53c3c;
+    color: #ffffff;
+    animation-name: blink;
+    animation-duration: 0.5s;
+    animation-timing-function: steps(12);
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+/*Calender*/
+/*Tray*/
+/*Power Options*/
+
+
+/* you can set a style on hover for any module like this */
+
+#tray:hover {
+        background-color: #202020;
+}
+
+#custom-power:hover {
+        background-color: #202020;
+}
+
+
+#custom-power {
+    background-color: #303030;
+    color: #ff1000;
+}
+
+
+@keyframes blink {
+    to {
+        background-color: #303030;
+        color: #000000;
+    }
+}
+
+/* Using steps() instead of linear as a timing function to limit cpu usage */
+
+label:focus {
+    background-color: #000000;
+}
+
+#disk {
+    background-color: #303030;
+}
+
+#backlight {
+    background-color: #303030;
+}
+
+
+keyboard-state {
+    color: #1aff00;
+    background-color: #303030;
+}
 #custom-media {
     background-color: #303030;
     color: #ff1000;
@@ -228,13 +299,6 @@ label:focus {
     background-color: #303030;
 }
 
-#temperature {
-    background-color: #303030;
-}
-
-#temperature.critical {
-    background-color: #303030;
-}
 
 #tray {
     background-color: #303030;

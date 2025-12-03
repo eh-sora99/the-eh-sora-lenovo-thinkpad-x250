@@ -5,46 +5,70 @@
     "height": 30, // Waybar height (to be removed for auto height)
     // "width": 1280, // Waybar width
     "spacing": 4, // Gaps between modules (4px)
+
     // Choose the order of the modules
     "modules-left": [
         "hyprland/workspaces",
-        "hyprland/mode",
+        "network",
+        "custom/bluetooth",
+        "pulseaudio",
+       // "hyprland/mode",
+        
+        
+        
         "hyprland/scratchpad"
     ],
+
     "modules-center": [
-        "hyprland/window"
+        "clock",
+        //"keyboard-state",
+        "calender"
+        //"hyprland/window"
     ],
+
     "modules-right": [
-        "idle_inhibitor",
-        "pulseaudio",
-        "network",
-        "power-profiles-daemon",
-        "cpu",
+        //"idle_inhibitor",
+        //"clock",
+        "custom/waybar-calendar",
         "memory",
         "temperature",
         "backlight",
-        "sway/language",
+       // "hyprland/language",
+        "power-profiles-daemon",
         "battery",
-        "clock",
-        "tray"
+        "battery#bat2",
+        "date",
+        "cpu",
+        "tray",
+        "custom/power"
     ],
-    // Modules configuration
-    // "hyprland/workspaces": {
-    //     "disable-scroll": true,
-    //     "all-outputs": true,
-    //     "warp-on-scroll": false,
-    //     "format": "{name}: {icon}",
-    //     "format-icons": {
-    //         "1": "",
-    //         "2": "",
-    //         "3": "",
-    //         "4": "",
-    //         "5": "",
-    //         "urgent": "",
-    //         "focused": "",
-    //         "default": ""
-    //     }
-    // },
+    
+  // Modules configuration
+     "hyprland/workspaces": {
+         "disable-scroll": true,
+         "all-outputs": true,
+         "warp-on-scroll": false,
+         "format": "{name}: {icon}",
+         "format-icons": {
+             "1": "",
+             "2": "",
+             "3": "",
+             "4": "",
+             "5": "",
+             "urgent": "",
+             "focused": "",
+             "default": ""
+         }
+     },
+    // "custom/bluetooth": {
+        // "numlock": true,
+        // "capslock": true,
+      //  "format": "{name} {icon}",
+        //"format-icons": {
+          //  "bluetooth_on": "",
+            //"bluetooth_off": ""
+   //  },
+
     "keyboard-state": {
         "numlock": true,
         "capslock": true,
@@ -100,22 +124,35 @@
     "tray": {
         // "icon-size": 21,
         "spacing": 10,
-        // "icons": {
-        //   "blueman": "bluetooth",
+         "icons": {
+           "blueman": "bluetooth"
         //   "TelegramDesktop": "$HOME/.local/share/icons/hicolor/16x16/apps/telegram.png"
-        // }
+         }
     },
     "clock": {
-        // "timezone": "America/New_York",
-        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-        "format-alt": "{:%Y-%m-%d}"
+        "interval": 1,
+        "format": "{:%H:%M:%S}",
+        "max-length": 25
     },
+
+    //"custom/waybar-calendar": {
+      //  "format": "{}",
+        //"return-type": "json",
+        //"max-length": 120,
+       // "interval": 30
+        //"exec": "python $HOME/Projects/waybar-calendar/check_db.py"
+    //},
+
     "cpu": {
         "format": "{usage}% ",
-        "tooltip": false
+        "tooltip": false,
+        "interval": 1
+
     },
     "memory": {
-        "format": "{}% "
+        "format": "{}% ",
+        "interval": 1
+
     },
     "temperature": {
         // "thermal-zone": 2,
@@ -123,13 +160,14 @@
         "critical-threshold": 80,
         // "format-critical": "{temperatureC}°C {icon}",
         "format": "{temperatureC}°C {icon}",
+        "interval": 1,
         "format-icons": ["", "", ""]
     },
-    "backlight": {
+    //"backlight": {
         // "device": "acpi_video1",
-        "format": "{percent}% {icon}",
-        "format-icons": ["🌑", "🌘", "🌗", "🌖", "🌕"]
-    },
+       // "format": "{percent}% {icon}",
+      //  "format-icons": ["🌑", "🌘", "🌗", "🌖", "🌕"]
+    //},
     "battery": {
         "states": {
             // "good": 95,
@@ -143,11 +181,14 @@
         "format-alt": "{time} {icon}",
         // "format-good": "", // An empty format will hide the module
         // "format-full": "",
-        "format-icons": ["", "", "", "", ""]
+        "format-icons": ["", "", "", "", ""],
+        "interval": 1
+
     },
+
     "battery#bat2": {
         "bat": "BAT2"
-    },
+    }, 
     "power-profiles-daemon": {
       "format": "{icon}",
       "tooltip-format": "Power profile: {profile}\nDriver: {driver}",
@@ -203,12 +244,13 @@
         "format" : "⏻ ",
 		"tooltip": false,
 		"menu": "on-click",
-		"menu-file": "$HOME/.config/waybar/power_menu.xml", // Menu file in resources folder
+		"menu-file": "$HOME/.config/waybar/power_menu", // Menu file in resources folder
 		"menu-actions": {
 			"shutdown": "shutdown",
 			"reboot": "reboot",
 			"suspend": "systemctl suspend",
-			"hibernate": "systemctl hibernate"
+			"hibernate": "systemctl hibernate",
+            "lockscreen": "$mainMod, L" 
 		}
     }
 }
