@@ -419,3 +419,84 @@ The Waybar style.css Brakedown
 
 */
 test
+
+
+
+TEMP
+PanelWindow {
+    
+  anchors {
+    top: true
+    left: false
+    right: true
+  }
+
+  implicitHeight: 30
+
+  Text {
+    // center the bar in its parent component (the window)
+    anchors.centerIn: parent
+
+    text: "Right"
+  }
+
+PanelWindow {
+
+implicitHeight: 30
+
+anchors {
+    top: true
+    left: false
+    right: false
+  }
+  Text {
+    anchors.centerIn: parent
+
+    text: "Center"
+  }
+}
+  PanelWindow {
+
+implicitHeight: 30
+
+anchors {
+    top: true
+    left: true
+    right: false
+  }
+  Text {
+    anchors.centerIn: parent
+
+    text: "Left"
+  }
+  
+  }
+}
+PanelWindow (Center) {
+    anchors {
+        top: true
+        right: true
+        left: true
+    }
+    
+    implicitHeight: 30
+
+Text {
+        anchors.centerIn: parent
+text: "center"
+} 
+}
+
+
+FloatingWindow {
+    visible: true
+    width: 200
+    height: 100
+
+    Text {
+        anchors.centerIn: parent
+        text: "Hello, Quickshell!"
+        color: "#0db9d7"
+        font.pixelSize: 18
+    }
+}
